@@ -1,6 +1,10 @@
 import SwiftUI
 
+
+
 struct BMIResult: View {
+    
+    
     
     let userHeight:Int
     let userWeight:Int
@@ -11,7 +15,7 @@ struct BMIResult: View {
     
     var body: some View {
         VStack{
-            Text("Tu Resultado")
+            Text("Your Result")
                 .font(.system(size: 35))
                 .foregroundStyle(.white)
             
