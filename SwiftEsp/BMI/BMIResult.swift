@@ -1,10 +1,6 @@
 import SwiftUI
 
-
-
 struct BMIResult: View {
-    
-    
     
     let userHeight:Int
     let userWeight:Int

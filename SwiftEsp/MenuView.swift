@@ -9,7 +9,6 @@ import SwiftUI
 
 struct MenuView: View {
     
-
     init() {
         let appearance = UINavigationBarAppearance()
         

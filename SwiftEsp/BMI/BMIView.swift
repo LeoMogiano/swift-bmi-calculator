@@ -4,9 +4,8 @@ struct BMIView: View {
     
     @State var gender:Int = -1
     @State var height:Double = 120.0
-    
-    @State var age:Int = 18
     @State var weight:Int = 70
+    @State var age:Int = 18
     
     
     var body: some View {
