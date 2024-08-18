@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct IMCView: View {
+struct BMIView: View {
     
     @State var gender:Int = -1
     @State var height:Double = 120.0
@@ -13,19 +13,19 @@ struct IMCView: View {
         VStack(){
             
             HStack{
-                ToogleButton(text: "Hombre", emoji: "🧔🏻", gender: 0, selectedGender: $gender)
-                ToogleButton(text: "Mujer", emoji: "👩🏻", gender: 1, selectedGender: $gender)
+                ToogleButton(text: "Man", emoji: "🧔🏻", gender: 0, selectedGender: $gender)
+                ToogleButton(text: "Woman", emoji: "👩🏻", gender: 1, selectedGender: $gender)
             }
             
             HeightCalculator(personalHeight: $height)
             
             
             HStack{
-                CounterButton(text: "Edad", counter: $age)
-                CounterButton(text: "Peso", counter: $weight)
+                CounterButton(text: "Age", counter: $age)
+                CounterButton(text: "Weight", counter: $weight)
             }
             
-            IMCCalculateButton(userHeight: Int(height) , userWeight: weight)
+            BMICalculateButton(userHeight: Int(height) , userWeight: weight)
             
         }
         
@@ -33,14 +33,14 @@ struct IMCView: View {
         .background(.backgroundApp)
         .toolbar {
             ToolbarItem(placement: .principal) {
-                Text("IMC Calculator").foregroundStyle(.white)
+                Text("BMI Calculator").foregroundStyle(.white)
             }
         }
         
     }
 }
 
-struct IMCCalculateButton:View {
+struct BMICalculateButton:View {
     
     let userHeight:Int
     let userWeight:Int
@@ -48,8 +48,8 @@ struct IMCCalculateButton:View {
     var body: some View {
         
         NavigationStack{
-            NavigationLink(destination: IMCResult(userHeight: userHeight, userWeight: userWeight)) {
-                Text("Calcular")
+            NavigationLink(destination: BMIResult(userHeight: userHeight, userWeight: userWeight)) {
+                Text("Calculate")
                     .font(.system(size: 25))
                     .foregroundStyle(.purple)
                     .bold()
@@ -63,5 +63,5 @@ struct IMCCalculateButton:View {
 }
 
 #Preview {
-    IMCView()
+    BMIView()
 }

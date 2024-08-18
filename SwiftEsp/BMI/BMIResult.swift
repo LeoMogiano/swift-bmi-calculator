@@ -1,15 +1,6 @@
-//
-//  IMCResult.swift
-//  SwiftEsp
-//
-//  Created by Leo Mogiano on 17/8/24.
-//
-
 import SwiftUI
 
-
-
-struct IMCResult: View {
+struct BMIResult: View {
     
     let userHeight:Int
     let userWeight:Int
@@ -44,36 +35,36 @@ struct IMCResult: View {
         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
         .background(.backgroundApp)
         .onAppear {
-            calculateIMC()
+            calculateBMI()
         }
     }
     
-    private func calculateIMC() {
+    private func calculateBMI() {
         let heightInMeters = Double(userHeight) / 100.0
         result = Double(userWeight) / (heightInMeters * heightInMeters)
         
         switch result {
         case ..<18.5:
-            resultText = "Bajo peso"
+            resultText = "Underweight"
             resultColor = .yellow
-            resultDescription = "Tu índice de masa corporal (IMC) indica que tienes un bajo peso. Es recomendable consultar a un profesional de la salud para obtener asesoramiento adecuado."
+            resultDescription = "Your Body Mass Index (BMI) indicates that you are underweight. It is advisable to consult a healthcare professional for proper guidance."
         case 18.5..<24.9:
             resultText = "Normal"
             resultColor = .green
-            resultDescription = "Tu IMC está en el rango normal. Mantén una dieta equilibrada y un estilo de vida saludable para conservar tu peso."
+            resultDescription = "Your BMI is in the normal range. Maintain a balanced diet and a healthy lifestyle to keep your weight in check."
         case 25..<29.9:
-            resultText = "Sobrepeso"
+            resultText = "Overweight"
             resultColor = .orange
-            resultDescription = "Tu IMC indica que tienes sobrepeso. Considera hacer ajustes en tu dieta y aumentar tu actividad física para mejorar tu salud."
+            resultDescription = "Your BMI indicates that you are overweight. Consider making adjustments to your diet and increasing physical activity to improve your health."
         default:
-            resultText = "Obesidad"
+            resultText = "Obesity"
             resultColor = .red
-            resultDescription = "Tu IMC indica obesidad. Es importante que consultes a un profesional de la salud para recibir orientación y apoyo para alcanzar un peso saludable."
+            resultDescription = "Your BMI indicates obesity. It is important to consult a healthcare professional for guidance and support to achieve a healthy weight."
         }
     }
 }
 
 
 #Preview {
-    IMCResult(userHeight: 80, userWeight: 100)
+    BMIResult(userHeight: 80, userWeight: 100)
 }

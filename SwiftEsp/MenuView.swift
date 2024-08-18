@@ -11,7 +11,7 @@ struct MenuView: View {
     var body: some View {
         NavigationStack{
             VStack{
-                NavigationLink("IMC Calculator", destination: IMCView())
+                NavigationLink("BMI Calculator", destination: BMIView())
                 NavigationLink {
                 }label: {
                     Text("Other App")

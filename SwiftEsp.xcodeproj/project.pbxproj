@@ -7,24 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B883DB1C2C714C7200AF1012 /* IMCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B883DB1B2C714C7200AF1012 /* IMCView.swift */; };
+		B883DB1C2C714C7200AF1012 /* BMIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B883DB1B2C714C7200AF1012 /* BMIView.swift */; };
 		B883DB1E2C714C9800AF1012 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B883DB1D2C714C9800AF1012 /* MenuView.swift */; };
 		B883DB212C715BF600AF1012 /* ToogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B883DB202C715BF600AF1012 /* ToogleButton.swift */; };
 		B883DB232C71610A00AF1012 /* HeightCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B883DB222C71610A00AF1012 /* HeightCalculator.swift */; };
 		B883DB252C71733B00AF1012 /* CounterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B883DB242C71733B00AF1012 /* CounterButton.swift */; };
-		B883DB272C71791F00AF1012 /* IMCResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B883DB262C71791F00AF1012 /* IMCResult.swift */; };
+		B883DB272C71791F00AF1012 /* BMIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B883DB262C71791F00AF1012 /* BMIResult.swift */; };
 		B892F4EC2C6E7D4300A9218F /* SwiftEspApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B892F4EB2C6E7D4300A9218F /* SwiftEspApp.swift */; };
 		B892F4F02C6E7D4400A9218F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B892F4EF2C6E7D4400A9218F /* Assets.xcassets */; };
 		B892F4F32C6E7D4400A9218F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B892F4F22C6E7D4400A9218F /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B883DB1B2C714C7200AF1012 /* IMCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCView.swift; sourceTree = "<group>"; };
+		B883DB1B2C714C7200AF1012 /* BMIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIView.swift; sourceTree = "<group>"; };
 		B883DB1D2C714C9800AF1012 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		B883DB202C715BF600AF1012 /* ToogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToogleButton.swift; sourceTree = "<group>"; };
 		B883DB222C71610A00AF1012 /* HeightCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightCalculator.swift; sourceTree = "<group>"; };
 		B883DB242C71733B00AF1012 /* CounterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterButton.swift; sourceTree = "<group>"; };
-		B883DB262C71791F00AF1012 /* IMCResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCResult.swift; sourceTree = "<group>"; };
+		B883DB262C71791F00AF1012 /* BMIResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIResult.swift; sourceTree = "<group>"; };
 		B892F4E82C6E7D4300A9218F /* SwiftEsp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftEsp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B892F4EB2C6E7D4300A9218F /* SwiftEspApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftEspApp.swift; sourceTree = "<group>"; };
 		B892F4EF2C6E7D4400A9218F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,14 +42,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B883DB1A2C714C6000AF1012 /* IMC */ = {
+		B883DB1A2C714C6000AF1012 /* BMI */ = {
 			isa = PBXGroup;
 			children = (
 				B883DB1F2C715BE200AF1012 /* Widgets */,
-				B883DB1B2C714C7200AF1012 /* IMCView.swift */,
-				B883DB262C71791F00AF1012 /* IMCResult.swift */,
+				B883DB1B2C714C7200AF1012 /* BMIView.swift */,
+				B883DB262C71791F00AF1012 /* BMIResult.swift */,
 			);
-			path = IMC;
+			path = BMI;
 			sourceTree = "<group>";
 		};
 		B883DB1F2C715BE200AF1012 /* Widgets */ = {
@@ -81,7 +81,7 @@
 		B892F4EA2C6E7D4300A9218F /* SwiftEsp */ = {
 			isa = PBXGroup;
 			children = (
-				B883DB1A2C714C6000AF1012 /* IMC */,
+				B883DB1A2C714C6000AF1012 /* BMI */,
 				B892F4EB2C6E7D4300A9218F /* SwiftEspApp.swift */,
 				B892F4EF2C6E7D4400A9218F /* Assets.xcassets */,
 				B892F4F12C6E7D4400A9218F /* Preview Content */,
@@ -170,9 +170,9 @@
 			files = (
 				B883DB252C71733B00AF1012 /* CounterButton.swift in Sources */,
 				B883DB1E2C714C9800AF1012 /* MenuView.swift in Sources */,
-				B883DB272C71791F00AF1012 /* IMCResult.swift in Sources */,
+				B883DB272C71791F00AF1012 /* BMIResult.swift in Sources */,
 				B883DB232C71610A00AF1012 /* HeightCalculator.swift in Sources */,
-				B883DB1C2C714C7200AF1012 /* IMCView.swift in Sources */,
+				B883DB1C2C714C7200AF1012 /* BMIView.swift in Sources */,
 				B883DB212C715BF600AF1012 /* ToogleButton.swift in Sources */,
 				B892F4EC2C6E7D4300A9218F /* SwiftEspApp.swift in Sources */,
 			);
