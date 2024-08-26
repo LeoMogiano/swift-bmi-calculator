@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B82143372C7C2316002DEDF1 /* HeroRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82143362C7C2316002DEDF1 /* HeroRepository.swift */; };
+		B82143392C7C23A2002DEDF1 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82143382C7C23A2002DEDF1 /* Hero.swift */; };
 		B883DB1C2C714C7200AF1012 /* BMIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B883DB1B2C714C7200AF1012 /* BMIView.swift */; };
 		B883DB1E2C714C9800AF1012 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B883DB1D2C714C9800AF1012 /* MenuView.swift */; };
 		B883DB212C715BF600AF1012 /* ToogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B883DB202C715BF600AF1012 /* ToogleButton.swift */; };
@@ -16,9 +18,13 @@
 		B892F4EC2C6E7D4300A9218F /* SwiftEspApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B892F4EB2C6E7D4300A9218F /* SwiftEspApp.swift */; };
 		B892F4F02C6E7D4400A9218F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B892F4EF2C6E7D4400A9218F /* Assets.xcassets */; };
 		B892F4F32C6E7D4400A9218F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B892F4F22C6E7D4400A9218F /* Preview Assets.xcassets */; };
+		B89518E72C7A44ED00704A44 /* ListExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89518E62C7A44ED00704A44 /* ListExample.swift */; };
+		B89518EA2C7A489B00704A44 /* SuperheroSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89518E92C7A489B00704A44 /* SuperheroSearcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B82143362C7C2316002DEDF1 /* HeroRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroRepository.swift; sourceTree = "<group>"; };
+		B82143382C7C23A2002DEDF1 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		B883DB1B2C714C7200AF1012 /* BMIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIView.swift; sourceTree = "<group>"; };
 		B883DB1D2C714C9800AF1012 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		B883DB202C715BF600AF1012 /* ToogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToogleButton.swift; sourceTree = "<group>"; };
@@ -29,6 +35,8 @@
 		B892F4EB2C6E7D4300A9218F /* SwiftEspApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftEspApp.swift; sourceTree = "<group>"; };
 		B892F4EF2C6E7D4400A9218F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B892F4F22C6E7D4400A9218F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B89518E62C7A44ED00704A44 /* ListExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListExample.swift; sourceTree = "<group>"; };
+		B89518E92C7A489B00704A44 /* SuperheroSearcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroSearcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +89,13 @@
 		B892F4EA2C6E7D4300A9218F /* SwiftEsp */ = {
 			isa = PBXGroup;
 			children = (
+				B89518E82C7A487C00704A44 /* Superhero */,
 				B883DB1A2C714C6000AF1012 /* BMI */,
 				B892F4EB2C6E7D4300A9218F /* SwiftEspApp.swift */,
 				B892F4EF2C6E7D4400A9218F /* Assets.xcassets */,
 				B892F4F12C6E7D4400A9218F /* Preview Content */,
 				B883DB1D2C714C9800AF1012 /* MenuView.swift */,
+				B89518E62C7A44ED00704A44 /* ListExample.swift */,
 			);
 			path = SwiftEsp;
 			sourceTree = "<group>";
@@ -96,6 +106,16 @@
 				B892F4F22C6E7D4400A9218F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B89518E82C7A487C00704A44 /* Superhero */ = {
+			isa = PBXGroup;
+			children = (
+				B89518E92C7A489B00704A44 /* SuperheroSearcher.swift */,
+				B82143362C7C2316002DEDF1 /* HeroRepository.swift */,
+				B82143382C7C23A2002DEDF1 /* Hero.swift */,
+			);
+			path = Superhero;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +192,10 @@
 				B883DB1E2C714C9800AF1012 /* MenuView.swift in Sources */,
 				B883DB272C71791F00AF1012 /* BMIResult.swift in Sources */,
 				B883DB232C71610A00AF1012 /* HeightCalculator.swift in Sources */,
+				B89518E72C7A44ED00704A44 /* ListExample.swift in Sources */,
+				B82143372C7C2316002DEDF1 /* HeroRepository.swift in Sources */,
+				B82143392C7C23A2002DEDF1 /* Hero.swift in Sources */,
+				B89518EA2C7A489B00704A44 /* SuperheroSearcher.swift in Sources */,
 				B883DB1C2C714C7200AF1012 /* BMIView.swift in Sources */,
 				B883DB212C715BF600AF1012 /* ToogleButton.swift in Sources */,
 				B892F4EC2C6E7D4300A9218F /* SwiftEspApp.swift in Sources */,

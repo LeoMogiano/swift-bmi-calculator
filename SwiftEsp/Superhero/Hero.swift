@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+// Estructura para capturar la respuesta completa del JSON
+struct HeroResponse: Codable {
+    let response: String
+    let results: [Hero]?
+}
+
+struct Hero:Identifiable, Codable {
+    let id: String
+    let name: String
+}
+

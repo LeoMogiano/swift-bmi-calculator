@@ -30,10 +30,7 @@ struct MenuView: View {
         NavigationStack{
             VStack{
                 NavigationLink("BMI Calculator", destination: BMIView())
-                NavigationLink {
-                }label: {
-                    Text("Other App")
-                }
+                NavigationLink("Superhero App", destination: SuperheroSearcher())
             }
         }
     }
