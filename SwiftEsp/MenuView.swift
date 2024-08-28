@@ -24,6 +24,8 @@ struct MenuView: View {
         
         UINavigationBar.appearance().standardAppearance = appearance
         
+        
+        
     }
     
     var body: some View {
