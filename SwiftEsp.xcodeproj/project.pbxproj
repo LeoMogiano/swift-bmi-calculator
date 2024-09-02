@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		B82143372C7C2316002DEDF1 /* HeroRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82143362C7C2316002DEDF1 /* HeroRepository.swift */; };
 		B82143392C7C23A2002DEDF1 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82143382C7C23A2002DEDF1 /* Hero.swift */; };
+		B828A6B02C852E5B00CE06A5 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = B828A6AF2C852E5B00CE06A5 /* SDWebImage */; };
+		B828A6B22C852E5B00CE06A5 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B828A6B12C852E5B00CE06A5 /* SDWebImageMapKit */; };
+		B828A6B52C8536EA00CE06A5 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = B828A6B42C8536EA00CE06A5 /* SDWebImageSwiftUI */; };
 		B883DB1C2C714C7200AF1012 /* BMIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B883DB1B2C714C7200AF1012 /* BMIView.swift */; };
 		B883DB1E2C714C9800AF1012 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B883DB1D2C714C9800AF1012 /* MenuView.swift */; };
 		B883DB212C715BF600AF1012 /* ToogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B883DB202C715BF600AF1012 /* ToogleButton.swift */; };
@@ -44,6 +47,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B828A6B52C8536EA00CE06A5 /* SDWebImageSwiftUI in Frameworks */,
+				B828A6B22C852E5B00CE06A5 /* SDWebImageMapKit in Frameworks */,
+				B828A6B02C852E5B00CE06A5 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +140,11 @@
 			dependencies = (
 			);
 			name = SwiftEsp;
+			packageProductDependencies = (
+				B828A6AF2C852E5B00CE06A5 /* SDWebImage */,
+				B828A6B12C852E5B00CE06A5 /* SDWebImageMapKit */,
+				B828A6B42C8536EA00CE06A5 /* SDWebImageSwiftUI */,
+			);
 			productName = SwiftEsp;
 			productReference = B892F4E82C6E7D4300A9218F /* SwiftEsp.app */;
 			productType = "com.apple.product-type.application";
@@ -162,6 +173,10 @@
 				Base,
 			);
 			mainGroup = B892F4DF2C6E7D4300A9218F;
+			packageReferences = (
+				B828A6AE2C852E5B00CE06A5 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				B828A6B32C8536EA00CE06A5 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = B892F4E92C6E7D4300A9218F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -404,6 +419,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B828A6AE2C852E5B00CE06A5 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.19.7;
+			};
+		};
+		B828A6B32C8536EA00CE06A5 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B828A6AF2C852E5B00CE06A5 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B828A6AE2C852E5B00CE06A5 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		B828A6B12C852E5B00CE06A5 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B828A6AE2C852E5B00CE06A5 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+		B828A6B42C8536EA00CE06A5 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B828A6B32C8536EA00CE06A5 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B892F4E02C6E7D4300A9218F /* Project object */;
 }

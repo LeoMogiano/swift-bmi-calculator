@@ -16,5 +16,10 @@ struct HeroResponse: Codable {
 struct Hero:Identifiable, Codable {
     let id: String
     let name: String
+    let image: ImageHero
+}
+
+struct ImageHero: Codable {
+    let url: String
 }
 

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct SuperheroSearcher: View {
     
@@ -41,16 +42,14 @@ struct SuperheroSearcher: View {
                 
                 if isLoading {
                     Spacer().frame(height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
-                    ProgressView()
-                        .progressViewStyle(CircularProgressViewStyle(tint: .white))
-                        .padding()
-                        
+                    ProgressView().progressViewStyle(CircularProgressViewStyle(tint: .white))
+                    
                 } else if let heroes = heroes {
                     if !heroes.isEmpty {
                         List(heroes) { hero in
                             SuperHeroItem(superhero: hero)
-                        }
-                        .scrollContentBackground(.hidden)
+                        }.listStyle(.plain)
+                        
                     } else {
                         Text("No heroes available")
                             .foregroundStyle(.red)
@@ -82,24 +81,34 @@ struct SuperheroSearcher: View {
 struct SuperHeroItem:View {
     let superhero: Hero
     var body: some View {
-        Text(superhero.name)
-            .listRowBackground(Color.gray.opacity(0.2))
-            .foregroundStyle(.white)
-    }
-}
+        ZStack{
+            WebImage(url: URL(string:superhero.image.url))
+                .resizable()
+                .indicator(.activity)
+                .scaledToFill()
+                .frame(height: 220)
+            
+            VStack{
+                Spacer()
+                Text(superhero.name).foregroundStyle(.white)
+                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .bold()
+                    .padding(.bottom, 10)
+                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                    .background(.white.opacity(0.5))
+            }
+        }
+        .listRowBackground(Color.white.opacity(0))
+        .frame(height: 220).clipShape(.rect(cornerRadius: 16))
+        .padding(.horizontal, 20)
+        
 
-extension View {
-    @available(iOS 14, *)
-    func navigationBarTitleTextColor(_ color: Color) -> some View {
-        let uiColor = UIColor(color)
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: uiColor ]
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: uiColor ]
-        return self
     }
 }
 
 
 #Preview {
+//    SuperHeroItem(superhero: Hero(id: "1", name: "Mogi"))
     SuperheroSearcher()
 }
 
