@@ -46,8 +46,12 @@ struct SuperheroSearcher: View {
                     
                 } else if let heroes = heroes {
                     if !heroes.isEmpty {
+                       
                         List(heroes) { hero in
-                            SuperHeroItem(superhero: hero)
+                            ZStack {
+                                SuperHeroItem(superhero: hero)
+                                NavigationLink(destination: {}){EmptyView()}.opacity(0)
+                            }.listRowBackground(Color.white.opacity(0))
                         }.listStyle(.plain)
                         
                     } else {
@@ -73,7 +77,6 @@ struct SuperheroSearcher: View {
             }
             .navigationBarBackButtonHidden()
             .foregroundStyle(.white)
-        
         }
     }
 }
@@ -84,13 +87,13 @@ struct SuperHeroItem:View {
         ZStack{
             WebImage(url: URL(string:superhero.image.url))
                 .resizable()
-                .indicator(.activity)
+                .indicator(.activity(style: CircularProgressViewStyle())).tint(.white)
                 .scaledToFill()
                 .frame(height: 220)
             
             VStack{
                 Spacer()
-                Text(superhero.name).foregroundStyle(.white)
+                Text(superhero.name).foregroundStyle(.backgroundApp)
                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                     .bold()
                     .padding(.bottom, 10)
@@ -98,11 +101,10 @@ struct SuperHeroItem:View {
                     .background(.white.opacity(0.5))
             }
         }
-        .listRowBackground(Color.white.opacity(0))
+
         .frame(height: 220).clipShape(.rect(cornerRadius: 16))
         .padding(.horizontal, 20)
         
-
     }
 }
 

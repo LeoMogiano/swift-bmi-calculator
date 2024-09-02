@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		B82143372C7C2316002DEDF1 /* HeroRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82143362C7C2316002DEDF1 /* HeroRepository.swift */; };
 		B82143392C7C23A2002DEDF1 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82143382C7C23A2002DEDF1 /* Hero.swift */; };
-		B828A6B02C852E5B00CE06A5 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = B828A6AF2C852E5B00CE06A5 /* SDWebImage */; };
-		B828A6B22C852E5B00CE06A5 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B828A6B12C852E5B00CE06A5 /* SDWebImageMapKit */; };
 		B828A6B52C8536EA00CE06A5 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = B828A6B42C8536EA00CE06A5 /* SDWebImageSwiftUI */; };
 		B883DB1C2C714C7200AF1012 /* BMIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B883DB1B2C714C7200AF1012 /* BMIView.swift */; };
 		B883DB1E2C714C9800AF1012 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B883DB1D2C714C9800AF1012 /* MenuView.swift */; };
@@ -48,8 +46,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B828A6B52C8536EA00CE06A5 /* SDWebImageSwiftUI in Frameworks */,
-				B828A6B22C852E5B00CE06A5 /* SDWebImageMapKit in Frameworks */,
-				B828A6B02C852E5B00CE06A5 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,8 +137,6 @@
 			);
 			name = SwiftEsp;
 			packageProductDependencies = (
-				B828A6AF2C852E5B00CE06A5 /* SDWebImage */,
-				B828A6B12C852E5B00CE06A5 /* SDWebImageMapKit */,
 				B828A6B42C8536EA00CE06A5 /* SDWebImageSwiftUI */,
 			);
 			productName = SwiftEsp;
@@ -440,16 +434,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B828A6AF2C852E5B00CE06A5 /* SDWebImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B828A6AE2C852E5B00CE06A5 /* XCRemoteSwiftPackageReference "SDWebImage" */;
-			productName = SDWebImage;
-		};
-		B828A6B12C852E5B00CE06A5 /* SDWebImageMapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B828A6AE2C852E5B00CE06A5 /* XCRemoteSwiftPackageReference "SDWebImage" */;
-			productName = SDWebImageMapKit;
-		};
 		B828A6B42C8536EA00CE06A5 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B828A6B32C8536EA00CE06A5 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
